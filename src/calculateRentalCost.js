@@ -7,11 +7,15 @@
 function calculateRentalCost(days) {
   const basePrice = 40;
   const totalAmount = days * basePrice;
+  const longTermDays = 7;
+  const longTermDiscount = 50;
+  const midTermDays = 3;
+  const midTermDiscount = 20;
 
-  if (days >= 7) {
-    return totalAmount - 50;
-  } else if (days >= 3) {
-    return totalAmount - 20;
+  if (days >= longTermDays) {
+    return totalAmount - longTermDiscount;
+  } else if (days >= midTermDays) {
+    return totalAmount - midTermDiscount;
   } else {
     return totalAmount;
   }
