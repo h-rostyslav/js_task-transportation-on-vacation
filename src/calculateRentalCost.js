@@ -16,9 +16,9 @@ function calculateRentalCost(days) {
     return totalAmount - longTermDiscount;
   } else if (days >= midTermDays) {
     return totalAmount - midTermDiscount;
-  } else {
-    return totalAmount;
   }
+
+  return totalAmount;
 }
 
 module.exports = calculateRentalCost;
